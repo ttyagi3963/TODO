@@ -16,7 +16,8 @@ class TodoListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Items.plist")
+        print(dataFilePath)
         let newItem = Item()
         newItem.title = "find Mike"
         itemArray.append(newItem)
